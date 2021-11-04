@@ -1,12 +1,12 @@
-''''
-Real Time Face Recogition
-	==> Each face stored on dataset/ dir, should have a unique numeric integer ID as 1, 2, 3, etc                       
-	==> LBPH computed model (trained faces) should be on trainer/ dir
-Based on original code by Anirban Kar: https://github.com/thecodacus/Face-Recognition    
+# ''''
+# Real Time Face Recogition
+# 	==> Each face stored on dataset/ dir, should have a unique numeric integer ID as 1, 2, 3, etc                       
+# 	==> LBPH computed model (trained faces) should be on trainer/ dir
+# Based on original code by Anirban Kar: https://github.com/thecodacus/Face-Recognition    
 
-Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18  
+# Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18  
 
-'''
+# '''
 
 import cv2
 import numpy as np
@@ -90,3 +90,64 @@ cam.release()
 cv2.destroyAllWindows()
 
 face_id = input('\n enter user id end press  ==>  ')
+
+
+# filename = 'video.avi'
+# frames_per_second = 24.0.
+
+# res = '480p'
+
+# # Set resolution for the video capture
+# # Function adapted from https://kirr.co/0l6qmh
+# def change_res(cap, width, height):
+#     cap.set(3, width)
+#     cap.set(4, height)
+
+# # Standard Video Dimensions Sizes
+# STD_DIMENSIONS =  {
+#     "480p": (640, 480),
+#     "720p": (1280, 720),
+#     "1080p": (1920, 1080),
+#     "4k": (3840, 2160),
+# }
+
+
+# # grab resolution dimensions and set video capture to it.
+# def get_dims(cap, res='1080p'):
+#     width, height = STD_DIMENSIONS["480p"]
+#     if res in STD_DIMENSIONS:
+#         width,height = STD_DIMENSIONS[res]
+#     ## change the current caputre device
+#     ## to the resulting resolution
+#     change_res(cap, width, height)
+#     return width, height
+
+# # Video Encoding, might require additional installs
+# # Types of Codes: http://www.fourcc.org/codecs.php
+# VIDEO_TYPE = {
+#     'avi': cv2.VideoWriter_fourcc(*'XVID'),
+#     #'mp4': cv2.VideoWriter_fourcc(*'H264'),
+#     'mp4': cv2.VideoWriter_fourcc(*'XVID'),
+# }
+
+# def get_video_type(filename):
+#     filename, ext = os.path.splitext(filename)
+#     if ext in VIDEO_TYPE:
+#       return  VIDEO_TYPE[ext]
+#     return VIDEO_TYPE['avi']
+
+
+
+# cap = cv2.VideoCapture(0)
+# out = cv2.VideoWriter(filename, get_video_type(filename), frames_per_second, get_dims(cap, res))
+# while True:
+#     ret, frame = cap.read()
+#     out.write(frame)
+#     cv2.imshow('frame',frame)
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
+
+
+# cap.release()
+# out.release()
+# cv2.destroyAllWindows()

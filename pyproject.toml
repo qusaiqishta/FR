@@ -12,6 +12,7 @@ Pillow = "^8.4.0"
 opencv-contrib-python = "^4.5.4"
 twilio = "^7.3.0"
 python-dotenv = "^0.19.1"
+argparse = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
