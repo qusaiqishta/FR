@@ -12,6 +12,9 @@ import cv2
 import numpy as np
 import os 
 from twilio.rest import Client
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -63,8 +66,8 @@ while True:
         else:
             id = "unknown"
             confidence = "  {0}%".format(round(100 - confidence))
-            account_sid = "AC51e5639e64054f199fec3ca70043c82a"
-            auth_token = "5044459a4b426d469f0111805354c44b"
+            account_sid = os.getenv('account_sid')
+            auth_token = os.getenv('auth_token')
             client = Client(account_sid, auth_token)
             call = client.calls.create(
                 twiml=f'<Response><Say>There is a possibility of an accident at  street, please check the surveillance Cameras</Say></Response>',
